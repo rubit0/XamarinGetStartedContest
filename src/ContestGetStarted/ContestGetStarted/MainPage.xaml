@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ContestGetStarted"
+             xmlns:urho="clr-namespace:Urho.Forms;assembly=Urho.Forms"
+             x:Class="ContestGetStarted.MainPage">
+    <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <urho:UrhoSurface x:Name="Surface" 
+                          AbsoluteLayout.LayoutFlags="All" 
+                          AbsoluteLayout.LayoutBounds="0, 0, 1, 1" />
+        
+        <StackLayout Padding="0, 14, 0, 0" 
+                     AbsoluteLayout.LayoutFlags="All" 
+                     AbsoluteLayout.LayoutBounds="0, 0, 1, 1">
+            
+            <Label Text="@studiodelatorre" />
+            <Label Text="This is Xamarin.Forms!" 
+                   VerticalOptions="Center" 
+                   HorizontalOptions="Center" />
+            
+        </StackLayout>
+    </AbsoluteLayout>
+</ContentPage>
+
