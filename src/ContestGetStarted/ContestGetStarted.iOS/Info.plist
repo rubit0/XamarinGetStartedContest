@@ -23,7 +23,7 @@
 	<key>MinimumOSVersion</key>
 	<string>10.3</string>
 	<key>CFBundleDisplayName</key>
-	<string>ContestGetStarted</string>
+	<string>Get Started!</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.stuiodelatorre.ContestGetStarted</string>
 	<key>CFBundleVersion</key>

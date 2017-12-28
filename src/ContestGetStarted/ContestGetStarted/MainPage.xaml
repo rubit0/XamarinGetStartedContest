@@ -30,6 +30,7 @@
 
             <Image Grid.Row="1"
                    HorizontalOptions="CenterAndExpand" 
+                   Scale="0.65"
                    Source="twitter_handle.png" />
 
             <Label Grid.Row="3" 
