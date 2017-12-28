@@ -11,10 +11,39 @@
 
         <Image x:Name="Pattern" 
                Source="pattern_bg.png"
-               Opacity="0.5"
+               Opacity="0.35"
                Aspect="AspectFill"
+               AnchorX="0.5" AnchorY="0.5"
                AbsoluteLayout.LayoutFlags="All" 
-               AbsoluteLayout.LayoutBounds="0, 0, 1, 1" />
+               AbsoluteLayout.LayoutBounds="0, 0, 2, 2" />
+
+        <Grid x:Name="TextThings" Padding="0, 14, 0, 0" 
+              AbsoluteLayout.LayoutFlags="All" 
+              AbsoluteLayout.LayoutBounds="0, 0, 1, 1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="26" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="4*" />
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Image Grid.Row="1"
+                   HorizontalOptions="CenterAndExpand" 
+                   Source="twitter_handle.png" />
+
+            <Label Grid.Row="3" 
+                   VerticalOptions="EndAndExpand" 
+                   HorizontalOptions="Center" 
+                   FontSize="22" TextColor="Black" 
+                   VerticalTextAlignment="Center" HorizontalTextAlignment="Center" >
+Thanks for the great 
+#GettingStarted docs!
+                
+Now it's time for the 
+Xamarin University!
+            </Label>
+        </Grid>
 
         <Image x:Name="Circle" 
                Source="rainbow_circle.png"
@@ -22,21 +51,16 @@
                AbsoluteLayout.LayoutFlags="All"
                AbsoluteLayout.LayoutBounds="0.5, 0.5, 0.65, 0.65" />
 
-        <StackLayout x:Name="TextThings" Padding="0, 14, 0, 0" 
-                     AbsoluteLayout.LayoutFlags="All" 
-                     AbsoluteLayout.LayoutBounds="0, 0, 1, 1">
-            
-            <Label Text="@studiodelatorre" />
-            <Label Text="This is Xamarin.Forms!" 
-                   VerticalOptions="Center" 
-                   HorizontalOptions="Center" />
-            
-        </StackLayout>
-        
         <BoxView x:Name="SightBlocker" 
                  AbsoluteLayout.LayoutFlags="All" 
                  AbsoluteLayout.LayoutBounds="0, 0, 1, 1" 
                  Color="White" />
+
+        <Image x:Name="Badge" 
+               Source="xam_uni.png"
+               AnchorX="0.5" AnchorY="0.1"
+               AbsoluteLayout.LayoutFlags="All"
+               AbsoluteLayout.LayoutBounds="0.5, 0.4, 0.6, 0.6" />
     </AbsoluteLayout>
 </ContentPage>
 

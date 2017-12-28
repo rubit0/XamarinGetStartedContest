@@ -60,15 +60,17 @@ namespace ContestGetStarted.Scenes
             //Light
             var light = _rootScene.CreateMainLight();
             light.LightType = LightType.Directional;
+            light.Brightness = 0.55f;
             light.Node.SetDirection(new Vector3(0f, 0f, 20f));
 
             //Xamarin Logo
             var xamModel = _rootScene.LoadModel("Logo", "Models/XamarinLogo.mdl", "Materials/XamarinLogoMat.xml");
             xamModel.Node.Position = new Vector3(-6.5f, 0f, 15f);
             xamModel.Node.Scale = new Vector3(75f, 75f, 75f);
-            xamModel.Node.Rotation = new Quaternion(0f, 90f, 0f);
+            xamModel.Node.SetDirection(new Vector3(0f, 0f, 90f));
             xamModel.Material.SetTechnique(0, CoreAssets.Techniques.NoTextureAlpha);
 
+            //Start Animation
             AnimateXamLogo(xamModel);
         }
 
@@ -77,10 +79,12 @@ namespace ContestGetStarted.Scenes
             var originalColor = model.Material.GetShaderParameter("MatDiffColor");
             var startColor = originalColor;
             startColor.A = 0f;
+            model.Material.SetShaderParameter("MatDiffColor", startColor);
 
             var fadeIn = new MaterialColorTween("MatDiffColor", startColor, originalColor, 2f);
             var rotation = new RepeatForever(new RotateBy(6f, 0f, 360f, 0f));
 
+            await Task.Delay(2200);
             await Task.WhenAll(
                 model.Node.RunActionsAsync(new EaseIn(fadeIn, 1f)),
                 model.Node.RunActionsAsync(rotation));

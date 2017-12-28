@@ -96,6 +96,9 @@
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <BundleResource Include="Resources\Data\Models\XamarinLogo.mdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </BundleResource>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
@@ -138,9 +141,17 @@
     <BundleResource Include="Resources\rainbow_circle.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\pattern.png" />
+    <BundleResource Include="Resources\pattern_bg.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\pattern_bg.png" />
+    <BundleResource Include="Resources\Data\Materials\XamarinLogoMat.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\xam_uni.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\twitter_handle.png" />
   </ItemGroup>
 </Project>
