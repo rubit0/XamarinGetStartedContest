@@ -8,8 +8,21 @@
         <urho:UrhoSurface x:Name="Surface" 
                           AbsoluteLayout.LayoutFlags="All" 
                           AbsoluteLayout.LayoutBounds="0, 0, 1, 1" />
-        
-        <StackLayout Padding="0, 14, 0, 0" 
+
+        <Image x:Name="Pattern" 
+               Source="pattern_bg.png"
+               Opacity="0.5"
+               Aspect="AspectFill"
+               AbsoluteLayout.LayoutFlags="All" 
+               AbsoluteLayout.LayoutBounds="0, 0, 1, 1" />
+
+        <Image x:Name="Circle" 
+               Source="rainbow_circle.png"
+               AnchorX="0.5" AnchorY="0.5"
+               AbsoluteLayout.LayoutFlags="All"
+               AbsoluteLayout.LayoutBounds="0.5, 0.5, 0.65, 0.65" />
+
+        <StackLayout x:Name="TextThings" Padding="0, 14, 0, 0" 
                      AbsoluteLayout.LayoutFlags="All" 
                      AbsoluteLayout.LayoutBounds="0, 0, 1, 1">
             
@@ -19,6 +32,11 @@
                    HorizontalOptions="Center" />
             
         </StackLayout>
+        
+        <BoxView x:Name="SightBlocker" 
+                 AbsoluteLayout.LayoutFlags="All" 
+                 AbsoluteLayout.LayoutBounds="0, 0, 1, 1" 
+                 Color="White" />
     </AbsoluteLayout>
 </ContentPage>
 

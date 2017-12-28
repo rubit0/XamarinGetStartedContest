@@ -78,8 +78,7 @@ namespace ContestGetStarted.Scenes
             var startColor = originalColor;
             startColor.A = 0f;
 
-            var fadeIn = new MaterialColorTween("MatDiffColor", startColor, originalColor, 5f);
-
+            var fadeIn = new MaterialColorTween("MatDiffColor", startColor, originalColor, 2f);
             var rotation = new RepeatForever(new RotateBy(6f, 0f, 360f, 0f));
 
             await Task.WhenAll(
